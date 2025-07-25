@@ -1,0 +1,80 @@
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    color: #00ffff;
+    font-family: 'Courier New', Courier, monospace;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Stars animation */
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    background-image: radial-gradient(#00ffff 1px, transparent 1px);
+    background-size: 20px 20px;
+    z-index: 0;
+    animation: twinkle 2s infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 0.3; }
+}
+
+/* Content */
+.container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    top: 30%;
+    transform: translateY(-30%);
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+    margin-bottom: 10px;
+}
+
+.slogan {
+    margin-bottom: 10px;
+    color: #a0e0e0;
+    font-size: 0.9em;
+}
+
+.subtext {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff;
+}
+
+.link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #00aaff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #00aaff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #00ffff;
+    transition: background 0.3s, color 0.3s;
+}
+
+.link:hover {
+    background: #00ffff;
+    color: black;
+}
